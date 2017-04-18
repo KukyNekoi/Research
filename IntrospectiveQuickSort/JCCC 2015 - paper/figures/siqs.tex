@@ -1,0 +1,20 @@
+\begin{figure}[!t]
+\begin{algorithmic}[1]
+\Procedure{SIQS}{$A, S, k$}
+\If{$k = S.top()$}
+	\State S.pop()
+	\State \textbf{return} $A_{k}$
+\EndIf
+\While{\textbf{true}}
+	\State $pidx \gets BFPRTmedian(A_{k,S.top()-1})$
+	\State $pidx \gets partition(A_{k,S.top()-1}, pidx)$
+	\If{$k = S.top()$}
+		\State S.pop()
+		\State \textbf{return} $A_{k}$
+	\EndIf	
+	\State $S.push(pidx)$
+\EndWhile \label{SIQS main cycle}
+\EndProcedure
+\end{algorithmic}
+\caption{Stable Incremental Quick Select}\label{siqs}
+\end{figure}

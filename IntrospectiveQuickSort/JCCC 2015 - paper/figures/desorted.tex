@@ -1,0 +1,148 @@
+\begin{figure}[!t]
+\begin{tikzpicture}
+%\tikzstyle{every path}=[very thick]
+\edef\sizetape{0.7cm}
+\tikzstyle{tmtape}=[draw,fill=white,rectangle, minimum width={width("000")+2pt}, minimum height=\heightof{Cap}+2*\myinnersep*0.6mm, font=\small]
+\tikzstyle{tmhead}=[minimum size=.5cm, minimum width={width("00")+2pt}, minimum height=\heightof{Cap}+2*\myinnersep*0.6mm, font=\small]
+\begin{scope}[start chain=1 going right,node distance=-0.15mm]
+    \node [on chain=1] at (-1.5,-.4) {A:};
+    \foreach [count=\i from 0] \x in {2,3,5,7,12,23,34,54,67,68,89} {
+        \x, \node [tmtape,draw,on chain=1] (a-\i) {\x};
+     }
+     \node [tmtape,draw,on chain=1](a-11){$\infty$};
+\end{scope}
+\foreach [count=\i from 0] \x in {89,68,67,54,34,23,12,7,5,3,2,1} {
+	\node [tmhead,yshift=+0.2cm] at (a-\i.north) (head) {$\i$};
+}
+
+\begin{scope}[start chain=2 going right,node distance=-0.15mm]
+    \node [on chain=2] at (-1.5,-1.0) {S:};
+    \foreach [count=\i from 0] \x in {11} {
+        \x, \node [tmtape,draw,on chain=2] (a-\i) {\x};
+        }
+\end{scope}
+\end{tikzpicture}\\
+
+\begin{tikzpicture}
+%\tikzstyle{every path}=[very thick]
+\edef\sizetape{0.7cm}
+\tikzstyle{tmtape}=[draw,fill=white,rectangle, minimum width={width("000")+2pt}, minimum height=\heightof{Cap}+2*\myinnersep*0.6mm, font=\small]
+\tikzstyle{tmhead}=[minimum size=.5cm, minimum width={width("00")+2pt}, minimum height=\heightof{Cap}+2*\myinnersep*0.6mm, font=\small]
+\begin{scope}[start chain=1 going right,node distance=-0.15mm]
+    \node [on chain=1] at (-1.5,-.4) {A:};
+    \foreach [count=\i from 0] \x in {2,3,5,7,12,23,34,54,67,68,\textbf{89}} {
+        \x, \node [tmtape,draw,on chain=1] (a-\i) {\x};
+        }
+     \node [tmtape,draw,on chain=1](a-11){$\infty$};
+\end{scope}
+\foreach [count=\i from 0] \x in {89,6,8,67,54,34,23,12,7,5,3,2} {
+	\node [tmhead,yshift=+0.2cm] at (a-\i.north) (head) {$\i$};
+}
+
+\begin{scope}[start chain=2 going right,node distance=-0.15mm]
+    \node [on chain=2] at (-1.5,-1.0) {S:};
+    \foreach [count=\i from 0] \x in {11,10} {
+        \x, \node [tmtape,draw,on chain=2] (a-\i) {\x};
+        }
+\end{scope}
+\end{tikzpicture}\\
+
+\begin{tikzpicture}
+%\tikzstyle{every path}=[very thick]
+\edef\sizetape{0.7cm}
+\tikzstyle{tmtape}=[draw,fill=white,rectangle, minimum width={width("000")+2pt}, minimum height=\heightof{Cap}+2*\myinnersep*0.6mm, font=\small]
+\tikzstyle{tmhead}=[minimum size=.5cm, minimum width={width("00")+2pt}, minimum height=\heightof{Cap}+2*\myinnersep*0.6mm, font=\small]
+\begin{scope}[start chain=1 going right,node distance=-0.15mm]
+    \node [on chain=1] at (-1.5,-.4) {A:};
+    \foreach [count=\i from 0] \x in {2,3,5,7,12,23,34,54,67,\textbf{68},\textbf{89}} {
+        \x, \node [tmtape,draw,on chain=1] (a-\i) {\x};
+        }
+     \node [tmtape,draw,on chain=1](a-11){$\infty$};
+\end{scope}
+\foreach [count=\i from 0] \x in {89,6,8,67,54,34,23,12,7,5,3,2} {
+	\node [tmhead,yshift=+0.2cm] at (a-\i.north) (head) {$\i$};
+}
+
+\begin{scope}[start chain=2 going right,node distance=-0.15mm]
+    \node [on chain=2] at (-1.5,-1.0) {S:};
+    \foreach [count=\i from 0] \x in {11,10, 9} {
+        \x, \node [tmtape,draw,on chain=2] (a-\i) {\x};
+        }
+\end{scope}
+\end{tikzpicture}\\
+
+\begin{tikzpicture}
+%\tikzstyle{every path}=[very thick]
+\edef\sizetape{0.7cm}
+\tikzstyle{tmtape}=[draw,fill=white,rectangle, minimum width={width("000")+2pt}, minimum height=\heightof{Cap}+2*\myinnersep*0.6mm, font=\small]
+\tikzstyle{tmhead}=[minimum size=.5cm, minimum width={width("00")+2pt}, minimum height=\heightof{Cap}+2*\myinnersep*0.6mm, font=\small]
+\begin{scope}[start chain=1 going right,node distance=-0.15mm]
+    \node [on chain=1] at (-1.5,-.4) {A:};
+    \foreach [count=\i from 0] \x in {2,3,5,7,12,23,34,54,\textbf{67},\textbf{68},\textbf{89}} {
+        \x, \node [tmtape,draw,on chain=1] (a-\i) {\x};
+        }
+     \node [tmtape,draw,on chain=1](a-11){$\infty$};
+\end{scope}
+\foreach [count=\i from 0] \x in {89,6,8,67,54,34,23,12,7,5,3,2} {
+	\node [tmhead,yshift=+0.2cm] at (a-\i.north) (head) {$\i$};
+}
+
+\begin{scope}[start chain=2 going right,node distance=-0.15mm]
+    \node [on chain=2] at (-1.5,-1.0) {S:};
+    \foreach [count=\i from 0] \x in {11,10, 9,8} {
+        \x, \node [tmtape,draw,on chain=2] (a-\i) {\x};
+        }
+\end{scope}
+\end{tikzpicture}\\
+
+\begin{tikzpicture}
+%\tikzstyle{every path}=[very thick]
+\edef\sizetape{0.7cm}
+\tikzstyle{tmtape}=[draw,fill=white,rectangle, minimum width={width("000")+2pt}, minimum height=\heightof{Cap}+2*\myinnersep*0.6mm, font=\small]
+\tikzstyle{tmhead}=[minimum size=.5cm, minimum width={width("00")+2pt}, minimum height=\heightof{Cap}+2*\myinnersep*0.6mm, font=\small]
+\begin{scope}[start chain=1 going right,node distance=-0.15mm]
+    \node [on chain=1] at (-1.5,-.4) {A:};
+    \foreach [count=\i from 0] \x in {2,3,5,7,12,23,43,\textbf{54},\textbf{67},\textbf{68},\textbf{89}} {
+        \x, \node [tmtape,draw,on chain=1] (a-\i) {\x};
+        }
+     \node [tmtape,draw,on chain=1](a-11){$\infty$};
+\end{scope}
+\foreach [count=\i from 0] \x in {89,6,8,67,54,34,23,12,7,5,3,2} {
+	\node [tmhead,yshift=+0.2cm] at (a-\i.north) (head) {$\i$};
+}
+
+\begin{scope}[start chain=2 going right,node distance=-0.15mm]
+    \node [on chain=2] at (-1.5,-1.0) {S:};
+    \foreach [count=\i from 0] \x in {11,10, 9,8,7} {
+        \x, \node [tmtape,draw,on chain=2] (a-\i) {\x};
+        }
+\end{scope}
+\end{tikzpicture}
+\begin{center}
+$\vdots$
+\end{center}
+\begin{tikzpicture}
+%\tikzstyle{every path}=[very thick]
+\edef\sizetape{0.7cm}
+\tikzstyle{tmtape}=[draw,fill=white,rectangle, minimum width={width("000")+2pt}, minimum height=\heightof{Cap}+2*\myinnersep*0.6mm, font=\small]
+\tikzstyle{tmhead}=[minimum size=.5cm, minimum width={width("00")+2pt}, minimum height=\heightof{Cap}+2*\myinnersep*0.6mm, font=\small]
+\begin{scope}[start chain=1 going right,node distance=-0.15mm]
+    \node [on chain=1] at (-1.5,-.4) {A:};
+    \foreach [count=\i from 0] \x in {\textbf{2},\textbf{3},\textbf{5},\textbf{7},\textbf{12},\textbf{23},\textbf{43},\textbf{54},\textbf{67},\textbf{68},\textbf{89}} {
+        \x, \node [tmtape,draw,on chain=1] (a-\i) {\x};
+        }
+     \node [tmtape,draw,on chain=1](a-11){$\infty$};
+\end{scope}
+\foreach [count=\i from 0] \x in {89,6,8,67,54,34,23,12,7,5,3,2} {
+	\node [tmhead,yshift=+0.2cm] at (a-\i.north) (head) {$\i$};
+}
+
+\begin{scope}[start chain=2 going right,node distance=-0.15mm]
+    \node [on chain=2] at (-1.5,-1.0) {S:};
+    \foreach [count=\i from 0] \x in {11,10, 9,8,7,6,5,4,3,2,1,0} {
+        \x, \node [tmtape,draw,on chain=2] (a-\i) {\x};
+        }
+\end{scope}
+\end{tikzpicture}
+\caption{Example of a normal IQS execution when retrieving the first element on a sorted array. Due to the failed pivot selection every pivot is stored on S overflowing the stack  ($log(k)$), because of that every scan is made in lineal time.}\label{fig:desortedexample}
+\end{figure}

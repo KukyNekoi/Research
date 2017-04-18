@@ -1,0 +1,56 @@
+\begin{figure}[!t]
+\begin{tikzpicture}[
+      start chain=1 going right,start chain=2 going right,node distance=-0.15mm
+    ]  
+    \node [on chain=1] at (-1.5,-.4) {A:};
+    \foreach \x in {2,3,5,7,12,23,34,54,67,68,89} {
+        \x, \node [draw,on chain=1] {\x};
+    }    
+    \node [on chain=2] at (-1.5,-1.0) {S:};
+    \foreach \x in {11} {
+        \x, \node [draw,on chain=2] {\x};
+    } 
+\end{tikzpicture}\\
+
+\begin{tikzpicture}[
+      start chain=1 going right,start chain=2 going right,node distance=-0.15mm
+    ]  
+    \node [on chain=1] at (-1.5,-.4) {A:};
+    \foreach \x in {\textbf{2},3,5,7,12,23,34,54,67,68,89} {
+        \x, \node [draw,on chain=1] {\x};
+    }    
+    \node [on chain=2] at (-1.5,-1.0) {S:};
+    \foreach \x in {11} {
+        \x, \node [draw,on chain=2] {\x};
+    } 
+\end{tikzpicture}\\
+
+\begin{tikzpicture}[
+      start chain=1 going right,start chain=2 going right,node distance=-0.15mm
+    ]  
+    \node [on chain=1] at (-1.5,-.4) {A:};
+    \foreach \x in {\textbf{2},\textbf{3},5,7,12,23,34,54,67,68,89} {
+        \x, \node [draw,on chain=1] {\x};
+    }    
+    \node [on chain=2] at (-1.5,-1.0) {S:};
+    \foreach \x in {11} {
+        \x, \node [draw,on chain=2] {\x};
+    } 
+\end{tikzpicture}\\
+
+\begin{tikzpicture}[
+      start chain=1 going right,start chain=2 going right,node distance=-0.15mm
+    ]  
+    \node [on chain=1] at (-1.5,-.4) {A:};
+    \foreach \x in {\textbf{2},\textbf{3},\textbf{5},7,12,23,34,54,67,68,89} {
+        \x, \node [draw,on chain=1] {\x};
+    }    
+    \node [on chain=2] at (-1.5,-1.0) {S:};
+    \foreach \x in {11} {
+        \x, \node [draw,on chain=2] {\x};
+    } 
+\end{tikzpicture}
+
+
+\caption{Example of a normal IQS execution when retrieving the first element on a sorted array. Due to the inexistent pivots on S, every scan is made in lineal time.}\label{example1}
+\end{figure}

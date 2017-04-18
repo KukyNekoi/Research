@@ -1,0 +1,15 @@
+\begin{figure}[!t]
+\begin{algorithmic}[1]
+\Procedure{IQS}{$A, S, k$}
+%\While{\textbf{true}}
+\While{$k < S.top()$}
+	\State $pidx \gets random(k,S.top()-1)$
+	\State $pidx \gets partition(A_{k,S.top()-1}, pidx)$
+	\State $S.push(pidx)$
+\EndWhile \label{IQS main cycle}
+\State $S.pop()$
+\State \textbf{return} $A_{k}$
+\EndProcedure
+\end{algorithmic}
+\caption{Incremental Quicksort. Stack $S$ is initialized as $S \gets |A|$.}\label{iqs}
+\end{figure}

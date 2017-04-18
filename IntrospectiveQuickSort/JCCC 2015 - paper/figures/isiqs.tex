@@ -1,0 +1,31 @@
+\begin{figure}[!t]
+\begin{algorithmic}[1]
+\Procedure{IIQS}{$A, S, k$}
+\While{$k < S.top()$}
+	\State $pidx \gets random(k,S.top()-1)$
+	\State $pidx \gets partition(A_{k,S.top()-1}, pidx)$
+	\State $m \gets S.top() - k$
+	\State $\alpha \gets 0.3$
+	\State $r \gets -1$
+	\If{$pidx < k + \alpha m$}
+		\State $r \gets pidx$
+		\State $pidx \gets pick(A_{r+1,S.top()-1})$
+		\State $pidx \gets partition(A_{r+1,S.top()-1}$,
+		\State \phantom{$pidx \gets partition$} $pidx)$
+	\ElsIf{$pidx > S.top() - \alpha m$}
+		\State $r \gets pidx$
+		\State $pidx \gets pick(A_{k,pidx})$
+		\State $pidx \gets partition(A_{k,r}, pidx)$
+		\State $r \gets -1$
+	\EndIf
+	\State S.push($pidx$)
+	\If{$r > -1$}
+		\State S.push($r$)
+	\EndIf
+\EndWhile
+\State S.pop()
+\State \textbf{return} $A_{k}$\label{IIQS_main_cycle}
+\EndProcedure
+\end{algorithmic}
+\caption{Introspective Incremental Quicksort.}\label{isiqs}
+\end{figure}
